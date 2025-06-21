@@ -1,0 +1,41 @@
+{
+  "name": "hyper-dark-material",
+  "displayName": "Hyper Dark Material",
+  "description": "A dark VS Code color theme based on Hyper Term, Dark+ (Default) and Material",
+  "version": "0.0.2",
+  "publisher": "kuscamara",
+  "engines": {
+    "vscode": "^1.45.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "hyper term",
+    "dark+",
+    "material",
+    "electron",
+    "dark"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Hyper Dark Material",
+        "uiTheme": "vs-dark",
+        "path": "./themes/hyper-dark-material-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcmr/hyper-dark-material-vscode-theme.git"
+  },
+  "icon": "images/icon.png",
+  "author": "Kus Cámara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kcmr/hyper-dark-material-vscode-theme/issues"
+  },
+  "homepage": "https://github.com/kcmr/hyper-dark-material-vscode-theme#readme"
+}
