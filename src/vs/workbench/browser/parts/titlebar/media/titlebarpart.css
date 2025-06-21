@@ -462,6 +462,27 @@
 	height: 12px;
 	line-height: 12px;
 	padding: 0 2px;
-	border-radius: 16px;
-	text-align: center;
+	border-radius: 16px;	text-align: center;
+}
+
+/* Product Name Text */
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-left > .product-name {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--vscode-titleBar-activeForeground);
+	margin-left: 4px;
+	line-height: 35px;
+	-webkit-app-region: no-drag;
+	user-select: none;
+	-webkit-user-select: none;
+	order: 2;
+	flex-shrink: 0;
+}
+
+.monaco-workbench .part.titlebar.inactive > .titlebar-container > .titlebar-left > .product-name {
+	color: var(--vscode-titleBar-inactiveForeground);
+}
+
+.monaco-workbench.fullscreen .part.titlebar > .titlebar-container > .titlebar-left > .product-name {
+	display: none;
 }

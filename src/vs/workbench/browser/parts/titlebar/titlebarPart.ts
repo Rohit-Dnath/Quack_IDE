@@ -452,11 +452,13 @@ export class BrowserTitlebarPart extends Part implements ITitlebarPart {
 
 		this.leftContent = append(this.rootContainer, $('.titlebar-left'));
 		this.centerContent = append(this.rootContainer, $('.titlebar-center'));
-		this.rightContent = append(this.rootContainer, $('.titlebar-right'));
-
-		// App Icon (Windows, Linux)
+		this.rightContent = append(this.rootContainer, $('.titlebar-right'));		// App Icon (Windows, Linux)
 		if ((isWindows || isLinux) && !hasNativeTitlebar(this.configurationService, this.titleBarStyle)) {
 			this.appIcon = prepend(this.leftContent, $('a.window-appicon'));
+		}
+		// Add "Quack" product name for all platforms with custom titlebar
+		if (!hasNativeTitlebar(this.configurationService, this.titleBarStyle)) {
+			append(this.leftContent, $('div.product-name', {}, 'Quack |'));
 		}
 
 		// Draggable region that we can manipulate for #52522
