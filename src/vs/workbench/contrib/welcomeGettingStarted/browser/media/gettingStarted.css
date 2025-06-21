@@ -1506,7 +1506,212 @@
 	font-size: 16px;
 }
 
+/* Team Nalayak Custom Styling */
+.monaco-workbench .part.editor > .content .gettingStartedContainer h1 {
+	background: linear-gradient(45deg, #007ACC, #4FC1FF, #FF6B6B, #4ECDC4);
+	background-size: 400% 400%;
+	animation: nalayakGradient 3s ease infinite;
+	-webkit-background-clip: text;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .monaco-workbench .part.editor > .content .gettingStartedContainer.newSlide .gettingStarted.showDetails .gettingStartedSlideCategories {
 	left: 100%;
 	opacity: 0;
+}
+
+/* Team Nalayak Custom Styling */
+.monaco-workbench .part.editor > .content .gettingStartedContainer h1 {
+	background: linear-gradient(45deg, #007ACC, #4FC1FF, #FF6B6B, #4ECDC4);
+	background-size: 400% 400%;
+	animation: nalayakGradient 3s ease infinite;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@keyframes nalayakGradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+.monaco-workbench .part.editor > .content .gettingStartedContainer .subtitle {
+	text-align: center;
+	opacity: 0.8;
+	font-style: italic;
+}
+
+/* Team Nalayak Logo Styling */
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-step[data-step-id="teamNalayakWelcome"] .getting-started-media img,
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-step[data-step-id="teamNalayakWelcomeWeb"] .getting-started-media img {
+	border-radius: 50%;
+	box-shadow: 0 8px 20px rgba(0, 123, 204, 0.3);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	animation: nalayakBounce 2s infinite;
+}
+
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-step[data-step-id="teamNalayakWelcome"] .getting-started-media img:hover,
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-step[data-step-id="teamNalayakWelcomeWeb"] .getting-started-media img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 12px 30px rgba(0, 123, 204, 0.5);
+}
+
+@keyframes nalayakBounce {
+	0%, 20%, 60%, 100% { transform: translateY(0); }
+	40% { transform: translateY(-10px); }
+	80% { transform: translateY(-5px); }
+}
+
+/* Custom card styling for Team Nalayak steps */
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-step[data-step-id="teamNalayakWelcome"],
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-step[data-step-id="teamNalayakWelcomeWeb"] {
+	background: linear-gradient(135deg, rgba(79, 193, 255, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+	border: 2px solid transparent;
+	border-radius: 12px;
+	background-clip: padding-box;
+	position: relative;
+	overflow: hidden;
+}
+
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-step[data-step-id="teamNalayakWelcome"]::before,
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-step[data-step-id="teamNalayakWelcomeWeb"]::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, #007ACC, #4FC1FF, #FF6B6B, #4ECDC4);
+	z-index: -1;
+	margin: -2px;
+	border-radius: inherit;
+}
+
+/* Fun quack animation for Team Nalayak theme */
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-step[data-step-id="teamNalayakWelcome"] .step-title::after,
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-step[data-step-id="teamNalayakWelcomeWeb"] .step-title::after {
+	content: ' 🦆';
+	animation: quackWiggle 2s ease-in-out infinite;
+}
+
+@keyframes quackWiggle {
+	0%, 100% { transform: rotate(0deg); }
+	25% { transform: rotate(-5deg); }
+	75% { transform: rotate(5deg); }
+}
+
+/* Enhanced button styling */
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-category button {
+	transition: all 0.3s ease;
+	border-radius: 8px;
+}
+
+.monaco-workbench .part.editor > .content .gettingStartedContainer .getting-started-category button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 123, 204, 0.2);
+}
+
+/* Custom background pattern */
+.monaco-workbench .part.editor > .content .gettingStartedContainer {
+	background-image:
+		radial-gradient(circle at 20% 50%, rgba(79, 193, 255, 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 40% 80%, rgba(78, 205, 196, 0.05) 0%, transparent 50%);
 }
