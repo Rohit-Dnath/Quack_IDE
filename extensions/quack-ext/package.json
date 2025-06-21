@@ -1,0 +1,119 @@
+{
+  "name": "quack-ext",
+  "displayName": "Quack-Ext",
+  "description": "Next-level IDE security for company codebases: MITM proxy prevents code leaks to external sites.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quack-ext.installDependencies",
+        "title": "Quack-Ext: Install Dependencies"
+      },
+      {
+        "command": "quack-ext.activateSecurity",
+        "title": "Quack-Ext: Enable Security"
+      },
+      {
+        "command": "quack-ext.manageWhitelist",
+        "title": "Quack-Ext: Manage Whitelist"
+      },
+      {
+        "command": "quack-ext.showWhitelist",
+        "title": "Quack-Ext: Show Whitelist"
+      },
+      {
+        "command": "quack-ext.scanExtensionSecurity",
+        "title": "Quack-Ext: Scan Extension Security"
+      },
+      {
+        "command": "quack-ext.secureCopy",
+        "title": "Quack-Ext: Secure Copy"
+      },
+      {
+        "command": "quack-ext.secureCut",
+        "title": "Quack-Ext: Secure Cut"
+      },
+      {
+        "command": "quack-ext.securePaste",
+        "title": "Quack-Ext: Secure Paste"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "quack-ext.secureCopy",
+        "key": "ctrl+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "quack-ext.secureCut",
+        "key": "ctrl+x",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "quack-ext.securePaste",
+        "key": "ctrl+v",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "files": [
+    "out",
+    "proxy.py",
+    "README.md",
+    "images",
+    "icon.png"
+  ],
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/quack-ext"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/quack-ext/issues"
+  },
+  "homepage": "https://github.com/your-org/quack-ext#readme",
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.101.0",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.25.1",
+    "eslint": "^9.23.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@types/web": "^0.0.243",
+    "crypto-js": "^4.2.0",
+    "node-fetch": "^2.7.0"
+  }
+}
